@@ -197,15 +197,19 @@ export default function AboutSection() {
     <section
       id="about"
       ref={sectionRef}
-      className="relative py-20 overflow-hidden bg-mint-gradient"
+      className="relative py-20 overflow-hidden bg-hero-gradient"
     >
-      {/* Background */}
-      <div className="absolute inset-0 pointer-events-none">
-        <img
-          src="https://d2xsxph8kpxj0f.cloudfront.net/310519663649908096/XSkKeEYc9Cj3zgNTddVRfJ/road_map_bg-MpoqPibbj4o8uqCBh29TvG.webp"
-          alt=""
-          className="w-full h-full object-cover opacity-35"
-        />
+      {/* Background decorative dots */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-12 right-12 opacity-[0.06]">
+          {Array.from({ length: 6 }).map((_, row) => (
+            <div key={row} className="flex gap-5 mb-5">
+              {Array.from({ length: 6 }).map((_, col) => (
+                <div key={col} className="w-1.5 h-1.5 rounded-full" style={{ background: "oklch(0.68 0.055 35)" }} />
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-6">

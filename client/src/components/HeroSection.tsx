@@ -197,32 +197,7 @@ export default function HeroSection() {
             </a>
           </div>
 
-          {/* Stats row */}
-          <div
-            className="flex gap-12 mt-12 pt-10"
-            style={{ borderTop: "1px solid oklch(0.880 0.012 75)" }}
-          >
-            {[
-              { value: "2+", label: "年实习经验" },
-              { value: "95%", label: "内容准时发布率" },
-              { value: "30%", label: "学员报名率提升" },
-            ].map((stat) => (
-              <div key={stat.label}>
-                <div
-                  className="text-3xl font-bold font-display"
-                  style={{ color: "oklch(0.68 0.055 35)" }}
-                >
-                  {stat.value}
-                </div>
-                <div
-                  className="text-xs mt-1"
-                  style={{ color: "oklch(0.50 0.025 155)" }}
-                >
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
+
         </div>
       </div>
 
