@@ -1,8 +1,7 @@
 /*
  * ContactSection — 联系页面 & Final Call
- * 设计：信条重申 + 联系信息 + 页脚
- * 配色：北欧温柔风 — 奶油米白底 #F5F3EF，暖棕玫瑰 #C4A99A，深林绿文字 #2C3E35
- * 联系卡片：填充暖米色背景突出显示，底部按钮改为下载简历
+ * 设计参考：技能工具箱风格 — 极浅米白背景 #FAFAF8，白色圆角卡片，暖棕分隔线
+ * 配色：bg #FAFAF8 | card white | accent #C4A99A | text #2C3E35
  */
 import { useEffect, useRef, useState } from "react";
 
@@ -32,113 +31,124 @@ export default function ContactSection() {
       id="contact"
       ref={sectionRef}
       className="relative py-24 overflow-hidden"
-      style={{ background: "linear-gradient(160deg, #F5F3EF 0%, #EDE9E3 50%, #F0ECE6 100%)" }}
+      style={{ background: "#FAFAF8" }}
     >
-      {/* Background decoration */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div
-          className="absolute top-0 left-0 right-0 h-px opacity-40"
-          style={{ background: "linear-gradient(90deg, transparent, #C4A99A, transparent)" }}
-        />
-        <div
-          className="absolute -bottom-40 -right-40 w-[600px] h-[600px] rounded-full opacity-20"
-          style={{ background: "radial-gradient(circle, #C4A99A 0%, transparent 70%)" }}
-        />
-        <div
-          className="absolute -top-24 -left-24 w-[400px] h-[400px] rounded-full opacity-10"
-          style={{ background: "radial-gradient(circle, #A8C5B5 0%, transparent 70%)" }}
-        />
-      </div>
-
       <div className="relative z-10 max-w-4xl mx-auto px-6">
-        {/* Section header */}
+
+        {/* Section header — 与技能工具箱一致的标题样式 */}
         <div
           className={`text-center mb-16 transition-all duration-700 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
           <div
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium mb-4"
-            style={{ background: "#E8E0D8", color: "#8B6F5E" }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium mb-6"
+            style={{ background: "#F0EBE5", color: "#8B6F5E" }}
           >
             <span>✉️</span> 联系我
           </div>
-          <h2 className="text-4xl font-bold mb-4" style={{ color: "#2C3E35" }}>
+          <h2
+            className="text-4xl lg:text-5xl font-bold mb-4"
+            style={{ color: "#2C3E35", fontFamily: "'Noto Serif SC', serif" }}
+          >
             Let's Connect
           </h2>
-          <p style={{ color: "#6B7E76" }}>
+          <p className="text-base" style={{ color: "#6B7E76" }}>
             期待与你一起，把模糊需求"搓"成清晰计划
           </p>
         </div>
 
-        {/* Creed block */}
+        {/* Creed block — 白色卡片，与工具箱卡片一致 */}
         <div
-          className={`mb-14 transition-all duration-700 delay-100 ${
+          className={`mb-12 transition-all duration-700 delay-100 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
           <div
-            className="relative rounded-3xl p-10 text-center overflow-hidden"
-            style={{ background: "linear-gradient(135deg, #EDE9E3 0%, #E8E0D8 100%)", border: "1px solid #D9D0C7" }}
+            className="relative rounded-2xl p-10 text-center overflow-hidden"
+            style={{
+              background: "#FFFFFF",
+              border: "1px solid #EDE9E3",
+              boxShadow: "0 2px 12px rgba(196,169,154,0.08)"
+            }}
           >
-            {/* Decorative quotes */}
+            {/* Decorative quote marks */}
             <div
-              className="absolute top-4 left-8 text-8xl font-serif leading-none select-none"
-              style={{ color: "#D9D0C7" }}
+              className="absolute top-5 left-7 text-7xl font-serif leading-none select-none"
+              style={{ color: "#EDE9E3" }}
             >
               "
             </div>
             <div
-              className="absolute bottom-4 right-8 text-8xl font-serif leading-none select-none rotate-180"
-              style={{ color: "#D9D0C7" }}
+              className="absolute bottom-5 right-7 text-7xl font-serif leading-none select-none rotate-180"
+              style={{ color: "#EDE9E3" }}
             >
               "
             </div>
-            <p className="relative text-2xl lg:text-3xl font-bold leading-relaxed" style={{ color: "#2C3E35" }}>
+            <p
+              className="relative text-xl lg:text-2xl font-bold leading-relaxed"
+              style={{ color: "#2C3E35" }}
+            >
               习惯把需求梳理清楚
               <span style={{ color: "#C4A99A" }}>、</span>
               把进度管到位
               <span style={{ color: "#C4A99A" }}>、</span>
               把交付做完整
             </p>
-            <p className="mt-4 text-sm font-display" style={{ color: "#8B6F5E" }}>
+            <p className="mt-3 text-sm" style={{ color: "#8B6F5E" }}>
               —— 朱倩萍的工作信条
             </p>
           </div>
         </div>
 
-        {/* Contact cards — filled warm color */}
+        {/* Category divider — 与技能工具箱分类标题一致 */}
         <div
-          className={`grid grid-cols-1 sm:grid-cols-2 gap-5 mb-10 transition-all duration-700 delay-200 ${
+          className={`flex items-center gap-4 mb-6 transition-all duration-700 delay-150 ${
+            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+        >
+          <div
+            className="w-9 h-9 rounded-xl flex items-center justify-center text-lg"
+            style={{ background: "#F0EBE5" }}
+          >
+            📬
+          </div>
+          <span className="text-lg font-semibold" style={{ color: "#2C3E35" }}>联系方式</span>
+          <div className="flex-1 h-px" style={{ background: "#EDE9E3" }} />
+        </div>
+
+        {/* Contact cards — 白色圆角卡片，与工具箱工具卡片一致 */}
+        <div
+          className={`grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12 transition-all duration-700 delay-200 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
           {/* WeChat/Phone */}
           <div
-            className="group p-6 rounded-2xl cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+            className="group p-6 rounded-2xl cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
             style={{
-              background: "linear-gradient(135deg, #EDE9E3 0%, #E4DDD5 100%)",
-              border: "1px solid #D9D0C7",
-              boxShadow: "0 2px 8px rgba(196,169,154,0.15)"
+              background: "#FFFFFF",
+              border: "1px solid #EDE9E3",
+              boxShadow: "0 1px 6px rgba(196,169,154,0.08)"
             }}
             onClick={() => handleCopy("13267128972", "phone")}
           >
             <div className="flex items-center gap-4">
               <div
-                className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl group-hover:scale-110 transition-transform"
-                style={{ background: "#C4A99A20" }}
+                className="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform"
+                style={{ background: "#F5F0EC" }}
               >
                 📱
               </div>
               <div className="flex-1">
-                <p className="text-xs mb-0.5" style={{ color: "#8B6F5E" }}>微信 / 手机</p>
-                <p className="text-lg font-semibold font-display tracking-wide" style={{ color: "#2C3E35" }}>
+                <p className="text-xs mb-1" style={{ color: "#8B6F5E" }}>微信 / 手机</p>
+                <p className="text-lg font-semibold tracking-wide" style={{ color: "#2C3E35" }}>
                   13267128972
                 </p>
               </div>
               <div
-                className="text-xs opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0"
-                style={{ color: "#C4A99A" }}
+                className="text-xs opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 px-2 py-1 rounded-full"
+                style={{ color: "#C4A99A", background: "#F5F0EC" }}
               >
                 {copied === "phone" ? "已复制 ✓" : "点击复制"}
               </div>
@@ -147,30 +157,30 @@ export default function ContactSection() {
 
           {/* Email */}
           <div
-            className="group p-6 rounded-2xl cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+            className="group p-6 rounded-2xl cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
             style={{
-              background: "linear-gradient(135deg, #EDE9E3 0%, #E4DDD5 100%)",
-              border: "1px solid #D9D0C7",
-              boxShadow: "0 2px 8px rgba(196,169,154,0.15)"
+              background: "#FFFFFF",
+              border: "1px solid #EDE9E3",
+              boxShadow: "0 1px 6px rgba(196,169,154,0.08)"
             }}
             onClick={() => handleCopy("qianpingzhu0821@163.com", "email")}
           >
             <div className="flex items-center gap-4">
               <div
-                className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl group-hover:scale-110 transition-transform"
-                style={{ background: "#C4A99A20" }}
+                className="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform"
+                style={{ background: "#F5F0EC" }}
               >
                 ✉️
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-xs mb-0.5" style={{ color: "#8B6F5E" }}>邮箱</p>
-                <p className="text-sm font-semibold font-display truncate" style={{ color: "#2C3E35" }}>
+                <p className="text-xs mb-1" style={{ color: "#8B6F5E" }}>邮箱</p>
+                <p className="text-sm font-semibold truncate" style={{ color: "#2C3E35" }}>
                   qianpingzhu0821@163.com
                 </p>
               </div>
               <div
-                className="text-xs opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0"
-                style={{ color: "#C4A99A" }}
+                className="text-xs opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 px-2 py-1 rounded-full"
+                style={{ color: "#C4A99A", background: "#F5F0EC" }}
               >
                 {copied === "email" ? "已复制 ✓" : "点击复制"}
               </div>
@@ -178,28 +188,28 @@ export default function ContactSection() {
           </div>
         </div>
 
-        {/* CTA — 下载简历 */}
+        {/* CTA — 下载简历按钮 */}
         <div
           className={`text-center mb-16 transition-all duration-700 delay-300 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
           <a
-            href="/manus-storage/朱倩萍个人简历13267128972_a09d9c4e.pdf"
+            href="/manus-storage/朱倩萍个人简历13267128972_9988fcb4.pdf"
             download="朱倩萍简历.pdf"
             className="inline-flex items-center gap-3 px-10 py-4 rounded-full font-semibold text-base transition-all duration-200 hover:-translate-y-1"
             style={{
               background: "#2C3E35",
-              color: "#F5F3EF",
-              boxShadow: "0 8px 24px rgba(44,62,53,0.25)"
+              color: "#FAFAF8",
+              boxShadow: "0 8px 24px rgba(44,62,53,0.20)"
             }}
             onMouseEnter={e => {
               (e.currentTarget as HTMLAnchorElement).style.background = "#1E2E27";
-              (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 12px 32px rgba(44,62,53,0.35)";
+              (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 12px 32px rgba(44,62,53,0.30)";
             }}
             onMouseLeave={e => {
               (e.currentTarget as HTMLAnchorElement).style.background = "#2C3E35";
-              (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 8px 24px rgba(44,62,53,0.25)";
+              (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 8px 24px rgba(44,62,53,0.20)";
             }}
           >
             <span>↓</span>
@@ -211,7 +221,7 @@ export default function ContactSection() {
         </div>
 
         {/* Divider */}
-        <div className="h-px mb-10" style={{ background: "#D9D0C7" }} />
+        <div className="h-px mb-10" style={{ background: "#EDE9E3" }} />
 
         {/* Footer */}
         <div
@@ -224,17 +234,18 @@ export default function ContactSection() {
               className="w-8 h-8 rounded-full flex items-center justify-center"
               style={{ background: "#2C3E35" }}
             >
-              <span className="text-white font-bold text-sm font-display">Q</span>
+              <span className="text-white font-bold text-sm">Q</span>
             </div>
-            <span className="font-serif font-bold" style={{ color: "#2C3E35" }}>朱倩萍</span>
+            <span className="font-bold text-base" style={{ color: "#2C3E35", fontFamily: "'Noto Serif SC', serif" }}>朱倩萍</span>
           </div>
-          <p className="text-xs font-medium mb-2" style={{ color: "#8B6F5E" }}>
+          <p className="text-xs font-medium mb-1" style={{ color: "#8B6F5E" }}>
             © 2026 朱倩萍. 基于软件工程逻辑与产品思维构建.
           </p>
-          <p className="text-xs font-display" style={{ color: "#A0ADA8" }}>
+          <p className="text-xs" style={{ color: "#A0ADA8" }}>
             Qianping Zhu · Product Manager Candidate
           </p>
         </div>
+
       </div>
     </section>
   );
