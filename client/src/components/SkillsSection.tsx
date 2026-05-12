@@ -84,8 +84,8 @@ const icons: Record<string, React.ReactNode> = {
 const SKILL_GROUPS = [
   {
     group: "产品逻辑",
-    color: "oklch(0.60 0.13 168)",
-    bgColor: "oklch(0.96 0.020 168)",
+    color: "oklch(0.68 0.055 35)",
+    bgColor: "oklch(0.940 0.012 75)",
     icon: "🎯",
     skills: [
       { name: "墨刀", key: "modao", desc: "原型设计" },
@@ -96,8 +96,8 @@ const SKILL_GROUPS = [
   },
   {
     group: "项目协作",
-    color: "oklch(0.60 0.18 250)",
-    bgColor: "oklch(0.96 0.015 250)",
+    color: "oklch(0.68 0.055 35)",
+    bgColor: "oklch(0.940 0.012 75)",
     icon: "🤝",
     skills: [
       { name: "Jira", key: "jira", desc: "项目管理" },
@@ -106,8 +106,8 @@ const SKILL_GROUPS = [
   },
   {
     group: "高效办公",
-    color: "oklch(0.55 0.15 50)",
-    bgColor: "oklch(0.97 0.015 50)",
+    color: "oklch(0.60 0.058 35)",
+    bgColor: "oklch(0.940 0.020 35)",
     icon: "💼",
     skills: [
       { name: "WPS", key: "wps", desc: "文档处理" },
@@ -140,13 +140,13 @@ export default function SkillsSection() {
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[oklch(0.92_0.040_168)] text-[oklch(0.48_0.11_168)] text-sm font-medium mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[oklch(0.940 0.020 35)] text-[oklch(0.52 0.060 35)] text-sm font-medium mb-4">
             <span>🛠️</span> 技能工具箱
           </div>
-          <h2 className="text-4xl font-bold text-[oklch(0.22_0.02_168)] mb-4">
+          <h2 className="text-4xl font-bold text-[oklch(0.27 0.035 155)] mb-4">
             Digital Toolkit
           </h2>
-          <p className="text-[oklch(0.55_0.04_168)] max-w-xl mx-auto">
+          <p className="text-[oklch(0.50 0.025 155)] max-w-xl mx-auto">
             熟练掌握产品设计、项目管理与数据分析全链路工具，深度结合 AI 辅助工具提升交付效率
           </p>
         </div>
@@ -169,7 +169,7 @@ export default function SkillsSection() {
                 >
                   {group.icon}
                 </div>
-                <h3 className="text-lg font-bold text-[oklch(0.22_0.02_168)]">{group.group}</h3>
+                <h3 className="text-lg font-bold text-[oklch(0.27 0.035 155)]">{group.group}</h3>
                 <div className="flex-1 h-px" style={{ backgroundColor: group.bgColor }} />
               </div>
 
@@ -189,8 +189,8 @@ export default function SkillsSection() {
                       )}
                     </div>
                     <div className="text-center">
-                      <p className="text-sm font-semibold text-[oklch(0.22_0.02_168)]">{skill.name}</p>
-                      <p className="text-xs text-[oklch(0.55_0.04_168)] mt-0.5">{skill.desc}</p>
+                      <p className="text-sm font-semibold text-[oklch(0.27 0.035 155)]">{skill.name}</p>
+                      <p className="text-xs text-[oklch(0.50 0.025 155)] mt-0.5">{skill.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -201,14 +201,14 @@ export default function SkillsSection() {
 
         {/* AI boost note */}
         <div
-          className={`mt-10 p-5 rounded-2xl border border-[oklch(0.90_0.020_168)] bg-[oklch(0.98_0.008_168)] flex items-start gap-4 transition-all duration-700 delay-500 ${
+          className={`mt-10 p-5 rounded-2xl border border-[oklch(0.880 0.012 75)] bg-[oklch(0.985 0.004 75)] flex items-start gap-4 transition-all duration-700 delay-500 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <div className="w-10 h-10 rounded-xl bg-[oklch(0.92_0.040_168)] flex items-center justify-center text-xl flex-shrink-0">
+          <div className="w-10 h-10 rounded-xl bg-[oklch(0.940 0.020 35)] flex items-center justify-center text-xl flex-shrink-0">
             ✨
           </div>
-          <p className="text-sm text-[oklch(0.40_0.06_168)] leading-relaxed italic">
+          <p className="text-sm text-[oklch(0.40 0.035 155)] leading-relaxed italic">
             深度结合 AI 辅助工具，实现自动化数据处理与高质量文档产出，大幅提升工作交付效率。
           </p>
         </div>

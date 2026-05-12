@@ -20,7 +20,7 @@ const NODES = [
     label: "教育背景",
     icon: "🎓",
     tag: "起点",
-    tagColor: "#2da87e",
+    tagColor: "oklch(0.68 0.055 35)",
     title: "东莞城市学院 · 软件工程",
     period: "2022.09 — 2026.06",
     details: [
@@ -38,7 +38,7 @@ const NODES = [
     label: "校园经历",
     icon: "🏫",
     tag: "统筹管理",
-    tagColor: "#7c5cbf",
+    tagColor: "oklch(0.52 0.060 35)",
     title: "校心理部门部长 · 东莞城市学院",
     period: "2022.10 — 2025.12",
     details: [
@@ -61,7 +61,7 @@ const NODES = [
     label: "蕾奥 AI 实习",
     icon: "🤖",
     tag: "产品实习",
-    tagColor: "#3b7dd8",
+    tagColor: "oklch(0.68 0.055 35)",
     title: "蕾奥人工智能科学研究院 · 产品实习生",
     period: "2024.11 — 2025.04",
     details: [
@@ -80,7 +80,7 @@ const NODES = [
     label: "海文辉传媒实习",
     icon: "📊",
     tag: "运营实习",
-    tagColor: "#c97a2a",
+    tagColor: "oklch(0.60 0.058 35)",
     title: "深圳市海文辉传媒 · 运营实习生",
     period: "2026.01 — 2026.05",
     details: [
@@ -102,7 +102,7 @@ const NODES = [
     label: "个人目标",
     icon: "🚀",
     tag: "终点",
-    tagColor: "#2da87e",
+    tagColor: "oklch(0.68 0.055 35)",
     title: "产品经理 · 数字化流程专家",
     period: "未来",
     details: [
@@ -215,13 +215,13 @@ export default function AboutSection() {
             sectionVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[oklch(0.92_0.040_168)] text-[oklch(0.48_0.11_168)] text-sm font-medium mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[oklch(0.940 0.020 35)] text-[oklch(0.52 0.060 35)] text-sm font-medium mb-4">
             <span>🗺️</span> 成长地图
           </div>
-          <h2 className="text-4xl font-bold text-[oklch(0.22_0.02_168)] mb-4">
+          <h2 className="text-4xl font-bold text-[oklch(0.27 0.035 155)] mb-4">
             About Me · 我的成长赛道
           </h2>
-          <p className="text-[oklch(0.55_0.04_168)] max-w-xl mx-auto">
+          <p className="text-[oklch(0.50 0.025 155)] max-w-xl mx-auto">
             点击路径上的节点，小车将沿 S 型赛道行驶，带你探索每一段成长故事
           </p>
         </div>
@@ -233,7 +233,7 @@ export default function AboutSection() {
               sectionVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
             }`}
           >
-            <div className="relative bg-white/60 backdrop-blur-sm rounded-3xl p-6 shadow-lg border border-[oklch(0.90_0.020_168)]">
+            <div className="relative bg-white/60 backdrop-blur-sm rounded-3xl p-6 shadow-lg border border-[oklch(0.880 0.012 75)]">
               <svg
                 viewBox="0 0 400 940"
                 className="w-full"
@@ -272,7 +272,7 @@ export default function AboutSection() {
                       cy={node.svgY}
                       r="22"
                       fill={activeNode === node.id ? "#f0fdf9" : "white"}
-                      stroke={activeNode === node.id ? "#2da87e" : "#a8e6cf"}
+                      stroke={activeNode === node.id ? "oklch(0.68 0.055 35)" : "oklch(0.820 0.040 35)"}
                       strokeWidth={activeNode === node.id ? "2.5" : "1.5"}
                     />
                     {/* Icon */}
@@ -296,7 +296,7 @@ export default function AboutSection() {
                       y={node.svgY + 11}
                       textAnchor={node.svgX > 200 ? "end" : "start"}
                       fontSize="9"
-                      fill="#2da87e"
+                      fill="oklch(0.68 0.055 35)"
                       fontFamily="DM Sans, sans-serif"
                     >
                       {node.period}
@@ -311,7 +311,7 @@ export default function AboutSection() {
                   {/* Shadow */}
                   <ellipse cx="0" cy="12" rx="13" ry="3.5" fill="#1a4a3a" opacity="0.10" />
                   {/* Body */}
-                  <rect x="-13" y="-8" width="26" height="15" rx="5" fill="#2da87e" />
+                  <rect x="-13" y="-8" width="26" height="15" rx="5" fill="oklch(0.68 0.055 35)" />
                   {/* Roof */}
                   <rect x="-8" y="-16" width="16" height="10" rx="4" fill="#1e7a58" />
                   {/* Windows */}
@@ -329,7 +329,7 @@ export default function AboutSection() {
                 </g>
               </svg>
 
-              <p className="text-center text-xs text-[oklch(0.60_0.13_168)] mt-2 font-medium">
+              <p className="text-center text-xs text-[oklch(0.68 0.055 35)] mt-2 font-medium">
                 ↑ 点击节点，小车将沿赛道行驶
               </p>
             </div>
@@ -343,10 +343,10 @@ export default function AboutSection() {
                   sectionVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               >
-                <div className="w-20 h-20 rounded-full bg-[oklch(0.92_0.040_168)] flex items-center justify-center mb-4">
+                <div className="w-20 h-20 rounded-full bg-[oklch(0.940 0.020 35)] flex items-center justify-center mb-4">
                   <span className="text-3xl">🚗</span>
                 </div>
-                <p className="text-[oklch(0.55_0.04_168)] text-center max-w-xs leading-relaxed">
+                <p className="text-[oklch(0.50 0.025 155)] text-center max-w-xs leading-relaxed">
                   点击左侧地图上的任意节点，小车将驶向那段经历，详细内容将在这里展示
                 </p>
               </div>
@@ -357,10 +357,10 @@ export default function AboutSection() {
                 }`}
               >
                 {activeNodeData && (
-                  <div className="bg-white rounded-3xl p-8 shadow-lg border border-[oklch(0.90_0.020_168)] card-mint-border">
+                  <div className="bg-white rounded-3xl p-8 shadow-lg border border-[oklch(0.880 0.012 75)] card-mint-border">
                     {/* Header */}
                     <div className="flex items-start gap-4 mb-6">
-                      <div className="w-14 h-14 rounded-2xl bg-[oklch(0.96_0.020_168)] flex items-center justify-center text-2xl flex-shrink-0">
+                      <div className="w-14 h-14 rounded-2xl bg-[oklch(0.940 0.012 75)] flex items-center justify-center text-2xl flex-shrink-0">
                         {activeNodeData.icon}
                       </div>
                       <div>
@@ -372,10 +372,10 @@ export default function AboutSection() {
                             {activeNodeData.tag}
                           </span>
                         </div>
-                        <h3 className="text-xl font-bold text-[oklch(0.22_0.02_168)]">
+                        <h3 className="text-xl font-bold text-[oklch(0.27 0.035 155)]">
                           {activeNodeData.title}
                         </h3>
-                        <p className="text-sm text-[oklch(0.55_0.04_168)] font-display mt-0.5">
+                        <p className="text-sm text-[oklch(0.50 0.025 155)] font-display mt-0.5">
                           {activeNodeData.period}
                         </p>
                       </div>
@@ -385,8 +385,8 @@ export default function AboutSection() {
                     <ul className="space-y-3 mb-6">
                       {activeNodeData.details.map((detail, i) => (
                         <li key={i} className="flex items-start gap-3">
-                          <div className="w-1.5 h-1.5 rounded-full bg-[oklch(0.60_0.13_168)] mt-2 flex-shrink-0" />
-                          <p className="text-sm text-[oklch(0.35_0.05_168)] leading-relaxed">
+                          <div className="w-1.5 h-1.5 rounded-full bg-[oklch(0.68 0.055 35)] mt-2 flex-shrink-0" />
+                          <p className="text-sm text-[oklch(0.40 0.035 155)] leading-relaxed">
                             {detail}
                           </p>
                         </li>
@@ -395,16 +395,16 @@ export default function AboutSection() {
 
                     {/* Metrics */}
                     {activeNodeData.metrics.length > 0 && (
-                      <div className="flex flex-wrap gap-3 pt-4 border-t border-[oklch(0.90_0.020_168)]">
+                      <div className="flex flex-wrap gap-3 pt-4 border-t border-[oklch(0.880 0.012 75)]">
                         {activeNodeData.metrics.map((metric) => (
                           <div
                             key={metric.label}
-                            className="flex-1 min-w-[100px] bg-[oklch(0.96_0.020_168)] rounded-xl p-3 text-center"
+                            className="flex-1 min-w-[100px] bg-[oklch(0.940 0.012 75)] rounded-xl p-3 text-center"
                           >
-                            <div className="text-lg font-bold text-[oklch(0.60_0.13_168)] font-display">
+                            <div className="text-lg font-bold text-[oklch(0.68 0.055 35)] font-display">
                               {metric.value}
                             </div>
-                            <div className="text-xs text-[oklch(0.55_0.04_168)] mt-0.5">
+                            <div className="text-xs text-[oklch(0.50 0.025 155)] mt-0.5">
                               {metric.label}
                             </div>
                           </div>
@@ -427,13 +427,13 @@ export default function AboutSection() {
               disabled={isAnimating}
               className={`p-4 rounded-2xl border text-left transition-all duration-200 ${
                 activeNode === node.id
-                  ? "border-[oklch(0.60_0.13_168)] bg-[oklch(0.96_0.020_168)]"
-                  : "border-[oklch(0.90_0.020_168)] bg-white hover:border-[oklch(0.78_0.10_168)]"
+                  ? "border-[oklch(0.68 0.055 35)] bg-[oklch(0.940 0.012 75)]"
+                  : "border-[oklch(0.880 0.012 75)] bg-white hover:border-[oklch(0.820 0.040 35)]"
               }`}
             >
               <span className="text-xl">{node.icon}</span>
-              <p className="text-sm font-semibold text-[oklch(0.22_0.02_168)] mt-1">{node.label}</p>
-              <p className="text-xs text-[oklch(0.55_0.04_168)]">{node.period}</p>
+              <p className="text-sm font-semibold text-[oklch(0.27 0.035 155)] mt-1">{node.label}</p>
+              <p className="text-xs text-[oklch(0.50 0.025 155)]">{node.period}</p>
             </button>
           ))}
         </div>

@@ -1,8 +1,17 @@
 /*
  * 朱倩萍个人品牌网站 — 全局样式
- * 设计理念：清新薄荷极简主义
- * 主色：薄荷绿 oklch(0.78 0.10 168) | 背景：近白 oklch(0.985 0.008 168)
+ * 设计理念：北欧温柔风（Soft Nordic）
+ * 背景：奶油米白 #F5F3EF | 点缀：暖棕玫瑰 #C4A99A | 文字：深林绿 #2C3E35
  * 字体：Noto Serif SC (标题) + Noto Sans SC (正文) + DM Sans (英文装饰)
+ *
+ * 色彩映射（oklch）：
+ *   背景 bg:        oklch(0.965 0.008 75)    ≈ #F5F3EF 奶油米白
+ *   卡片 card:      oklch(0.985 0.004 75)    ≈ #FAF9F7 近白
+ *   主色 primary:   oklch(0.68 0.055 35)     ≈ #C4A99A 暖棕玫瑰
+ *   文字 fg:        oklch(0.27 0.035 155)    ≈ #2C3E35 深林绿
+ *   次要文字:       oklch(0.50 0.025 155)    ≈ #6B7E76 中性绿灰
+ *   边框:           oklch(0.88 0.012 75)     ≈ #E2DDD7 暖灰边框
+ *   accent:         oklch(0.92 0.018 75)     ≈ #EDE9E3 浅奶油
  */
 
 @import "tailwindcss";
@@ -34,57 +43,61 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-mint-50: oklch(0.985 0.012 168);
-  --color-mint-100: oklch(0.96 0.025 168);
-  --color-mint-200: oklch(0.92 0.045 168);
-  --color-mint-300: oklch(0.85 0.075 168);
-  --color-mint-400: oklch(0.78 0.10 168);
-  --color-mint-500: oklch(0.70 0.12 168);
-  --color-mint-600: oklch(0.60 0.13 168);
-  --color-mint-700: oklch(0.48 0.11 168);
-  --color-mint-800: oklch(0.35 0.08 168);
-  --color-mint-900: oklch(0.25 0.06 168);
+
+  /* Nordic palette tokens */
+  --color-nordic-50:  oklch(0.985 0.004 75);
+  --color-nordic-100: oklch(0.965 0.008 75);
+  --color-nordic-200: oklch(0.940 0.012 75);
+  --color-nordic-300: oklch(0.900 0.018 75);
+  --color-nordic-400: oklch(0.860 0.025 75);
+  --color-nordic-rose-100: oklch(0.940 0.020 35);
+  --color-nordic-rose-300: oklch(0.820 0.040 35);
+  --color-nordic-rose-500: oklch(0.68 0.055 35);
+  --color-nordic-rose-700: oklch(0.52 0.060 35);
+  --color-nordic-green-800: oklch(0.27 0.035 155);
+  --color-nordic-green-600: oklch(0.40 0.035 155);
+  --color-nordic-green-400: oklch(0.50 0.025 155);
 }
 
 :root {
-  --radius: 0.75rem;
-  /* Mint green primary */
-  --primary: oklch(0.60 0.13 168);
-  --primary-foreground: oklch(0.99 0 0);
+  --radius: 0.625rem;
+  /* Primary: warm dusty rose */
+  --primary: oklch(0.68 0.055 35);
+  --primary-foreground: oklch(0.985 0 0);
   /* Backgrounds */
-  --background: oklch(0.99 0.004 168);
-  --foreground: oklch(0.22 0.02 168);
+  --background: oklch(0.965 0.008 75);
+  --foreground: oklch(0.27 0.035 155);
   /* Cards */
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.22 0.02 168);
+  --card: oklch(0.985 0.004 75);
+  --card-foreground: oklch(0.27 0.035 155);
   /* Popover */
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.22 0.02 168);
+  --popover: oklch(0.985 0.004 75);
+  --popover-foreground: oklch(0.27 0.035 155);
   /* Secondary */
-  --secondary: oklch(0.96 0.020 168);
-  --secondary-foreground: oklch(0.40 0.06 168);
+  --secondary: oklch(0.940 0.012 75);
+  --secondary-foreground: oklch(0.40 0.035 155);
   /* Muted */
-  --muted: oklch(0.96 0.015 168);
-  --muted-foreground: oklch(0.55 0.04 168);
+  --muted: oklch(0.940 0.012 75);
+  --muted-foreground: oklch(0.50 0.025 155);
   /* Accent */
-  --accent: oklch(0.92 0.040 168);
-  --accent-foreground: oklch(0.35 0.08 168);
+  --accent: oklch(0.920 0.018 75);
+  --accent-foreground: oklch(0.27 0.035 155);
   /* Destructive */
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
   /* Border / Input */
-  --border: oklch(0.90 0.020 168);
-  --input: oklch(0.90 0.020 168);
-  --ring: oklch(0.60 0.13 168);
+  --border: oklch(0.880 0.012 75);
+  --input: oklch(0.880 0.012 75);
+  --ring: oklch(0.68 0.055 35);
   /* Sidebar */
-  --sidebar: oklch(0.985 0.012 168);
-  --sidebar-foreground: oklch(0.22 0.02 168);
-  --sidebar-primary: oklch(0.60 0.13 168);
-  --sidebar-primary-foreground: oklch(0.99 0 0);
-  --sidebar-accent: oklch(0.92 0.040 168);
-  --sidebar-accent-foreground: oklch(0.35 0.08 168);
-  --sidebar-border: oklch(0.90 0.020 168);
-  --sidebar-ring: oklch(0.60 0.13 168);
+  --sidebar: oklch(0.965 0.008 75);
+  --sidebar-foreground: oklch(0.27 0.035 155);
+  --sidebar-primary: oklch(0.68 0.055 35);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.920 0.018 75);
+  --sidebar-accent-foreground: oklch(0.27 0.035 155);
+  --sidebar-border: oklch(0.880 0.012 75);
+  --sidebar-ring: oklch(0.68 0.055 35);
 }
 
 @layer base {
@@ -146,7 +159,7 @@
   .typewriter-cursor::after {
     content: '|';
     animation: blink 1s step-end infinite;
-    color: oklch(0.60 0.13 168);
+    color: oklch(0.68 0.055 35);
     margin-left: 2px;
   }
   @keyframes blink {
@@ -154,12 +167,12 @@
     50% { opacity: 0; }
   }
 
-  /* Mint gradient backgrounds */
-  .bg-mint-gradient {
-    background: linear-gradient(180deg, oklch(0.96 0.025 168) 0%, oklch(0.99 0.004 168) 100%);
+  /* Nordic gradient backgrounds */
+  .bg-nordic-gradient {
+    background: linear-gradient(180deg, oklch(0.940 0.012 75) 0%, oklch(0.965 0.008 75) 100%);
   }
   .bg-hero-gradient {
-    background: linear-gradient(135deg, oklch(0.97 0.020 168) 0%, oklch(0.99 0.008 168) 60%, oklch(1 0 0) 100%);
+    background: linear-gradient(135deg, oklch(0.950 0.014 75) 0%, oklch(0.970 0.008 75) 55%, oklch(0.985 0.004 75) 100%);
   }
 
   /* Card hover effect */
@@ -168,7 +181,7 @@
   }
   .card-hover:hover {
     transform: translateY(-4px);
-    box-shadow: 0 16px 40px oklch(0.60 0.13 168 / 0.15);
+    box-shadow: 0 16px 40px oklch(0.68 0.055 35 / 0.12);
   }
 
   /* Section fade-in animation */
@@ -182,9 +195,9 @@
     transform: translateY(0);
   }
 
-  /* Mint left border card */
+  /* Rose left border card */
   .card-mint-border {
-    border-left: 3px solid oklch(0.60 0.13 168);
+    border-left: 3px solid oklch(0.68 0.055 35);
   }
 
   /* Dashed road path */
@@ -199,20 +212,20 @@
 
   /* Skill card */
   .skill-card {
-    background: white;
-    border: 1px solid oklch(0.90 0.020 168);
-    border-radius: 1rem;
+    background: oklch(0.985 0.004 75);
+    border: 1px solid oklch(0.880 0.012 75);
+    border-radius: 0.875rem;
     transition: all 0.3s ease;
   }
   .skill-card:hover {
-    border-color: oklch(0.60 0.13 168);
-    box-shadow: 0 8px 24px oklch(0.60 0.13 168 / 0.12);
+    border-color: oklch(0.68 0.055 35);
+    box-shadow: 0 8px 24px oklch(0.68 0.055 35 / 0.10);
     transform: translateY(-2px);
   }
 
   /* PRD drawer */
   .prd-section {
-    border-left: 2px solid oklch(0.85 0.075 168);
+    border-left: 2px solid oklch(0.820 0.040 35);
     padding-left: 1.5rem;
     margin-bottom: 2rem;
   }
@@ -222,10 +235,10 @@
     width: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: oklch(0.96 0.015 168);
+    background: oklch(0.940 0.012 75);
   }
   ::-webkit-scrollbar-thumb {
-    background: oklch(0.78 0.10 168);
+    background: oklch(0.820 0.040 35);
     border-radius: 3px;
   }
 }
