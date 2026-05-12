@@ -42,7 +42,7 @@ const PROJECTS: Project[] = [
     id: "shufa",
     title: "书法班逆势增长项目",
     subtitle: "从濒临关闭的6人班 → 假期满员运营，总学员40+",
-    company: "某书法教育机构",
+    company: "橙果艺术中心",
     period: "6个月 · 已结项",
     tags: ["教学体系重塑", "用户增长", "干系人管理", "数据驱动"],
     coverColor: "oklch(0.68 0.055 35)",
