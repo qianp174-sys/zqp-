@@ -216,7 +216,7 @@ export default function ContactSection() {
             下载简历
           </a>
           <p className="mt-4 text-sm" style={{ color: "#8B6F5E" }}>
-            或直接拨打 13267128972 · 期待你的联系
+            期待与您沟通
           </p>
         </div>
 
