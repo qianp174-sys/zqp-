@@ -162,7 +162,7 @@ export default function HeroSection() {
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </button>
             <a
-              href="/manus-storage/朱倩萍个人简历13267128972_9988fcb4.pdf"
+              href="/manus-storage/朱倩萍个人简历13267128972_24bc7ae4.pdf"
               download="朱倩萍简历.pdf"
               className="flex items-center gap-2 px-7 py-3.5 rounded-full font-medium text-sm transition-all duration-200 hover:-translate-y-0.5"
               style={{

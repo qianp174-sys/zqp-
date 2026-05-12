@@ -195,7 +195,7 @@ export default function ContactSection() {
           }`}
         >
           <a
-            href="/manus-storage/朱倩萍个人简历13267128972_9988fcb4.pdf"
+            href="/manus-storage/朱倩萍个人简历13267128972_24bc7ae4.pdf"
             download="朱倩萍简历.pdf"
             className="inline-flex items-center gap-3 px-10 py-4 rounded-full font-semibold text-base transition-all duration-200 hover:-translate-y-1"
             style={{
