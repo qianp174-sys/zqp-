@@ -6,7 +6,7 @@
  */
 import { useState, useEffect, useRef } from "react";
 
-const TYPING_TEXTS = ["软件工程背景", "从0到1的产品思维者", "流程结构化专家", "数据驱动决策者"];
+const TYPING_TEXTS = ["软件工程背景", "从0到1的产品思维者", "数据驱动决策者"];
 
 export default function HeroSection() {
   const [displayText, setDisplayText] = useState("");
@@ -94,21 +94,6 @@ export default function HeroSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          {/* Tag */}
-          <div
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium mb-8"
-            style={{
-              background: "oklch(0.940 0.020 35)",
-              color: "oklch(0.52 0.060 35)",
-            }}
-          >
-            <span
-              className="w-2 h-2 rounded-full animate-pulse"
-              style={{ background: "oklch(0.68 0.055 35)" }}
-            />
-            产品经理候选人
-          </div>
-
           {/* Name */}
           <h1
             className="text-6xl lg:text-7xl font-bold mb-3 leading-tight"
