@@ -96,7 +96,7 @@ export default function ContactSection() {
               把交付做完整
             </p>
             <p className="mt-3 text-sm" style={{ color: "#8B6F5E" }}>
-              —— 朱倩萍的工作信条
+              
             </p>
           </div>
         </div>

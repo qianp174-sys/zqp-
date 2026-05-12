@@ -208,7 +208,7 @@ export default function SkillsSection() {
           <div className="w-10 h-10 rounded-xl bg-[oklch(0.940 0.020 35)] flex items-center justify-center text-xl flex-shrink-0">
             ✨
           </div>
-          <p className="text-sm text-[oklch(0.40 0.035 155)] leading-relaxed italic">
+          <p className="text-sm text-[oklch(0.40 0.035 155)] leading-relaxed italic" style={{fontSize: '18px'}}>
             深度结合 AI 辅助工具，实现自动化数据处理与高质量文档产出，大幅提升工作交付效率。
           </p>
         </div>

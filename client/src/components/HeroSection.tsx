@@ -105,7 +105,7 @@ export default function HeroSection() {
             className="font-display text-2xl mb-5 tracking-wide"
             style={{ color: "oklch(0.50 0.025 155)" }}
           >
-            Qianping Zhu
+            Champ Zhu
           </p>
 
           {/* Typewriter */}

@@ -440,10 +440,10 @@ export default function AboutSection() {
             <span>🗺️</span> 成长地图
           </div>
           <h2 className="text-4xl font-bold text-[oklch(0.27_0.035_155)] mb-4">
-            About Me · 我的成长赛道
+            About Me · 我的个人经历
           </h2>
           <p className="text-[oklch(0.50_0.025_155)] max-w-xl mx-auto">
-            点击路径上的节点，小车将沿 S 型赛道行驶，带你探索每一段成长故事
+            点击路径上的节点，小车将沿 S 型赛道行驶，带你探索每一段故事
           </p>
         </div>
 
