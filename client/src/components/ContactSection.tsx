@@ -199,17 +199,17 @@ export default function ContactSection() {
             download="朱倩萍简历.pdf"
             className="inline-flex items-center gap-3 px-10 py-4 rounded-full font-semibold text-base transition-all duration-200 hover:-translate-y-1"
             style={{
-              background: "#2C3E35",
-              color: "#FAFAF8",
-              boxShadow: "0 8px 24px rgba(44,62,53,0.20)"
+              background: "oklch(0.68 0.055 35)",
+              color: "oklch(0.985 0 0)",
+              boxShadow: "0 8px 24px oklch(0.68 0.055 35 / 0.28)"
             }}
             onMouseEnter={e => {
-              (e.currentTarget as HTMLAnchorElement).style.background = "#1E2E27";
-              (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 12px 32px rgba(44,62,53,0.30)";
+              (e.currentTarget as HTMLAnchorElement).style.background = "oklch(0.60 0.058 35)";
+              (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 12px 32px oklch(0.68 0.055 35 / 0.38)";
             }}
             onMouseLeave={e => {
-              (e.currentTarget as HTMLAnchorElement).style.background = "#2C3E35";
-              (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 8px 24px rgba(44,62,53,0.20)";
+              (e.currentTarget as HTMLAnchorElement).style.background = "oklch(0.68 0.055 35)";
+              (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 8px 24px oklch(0.68 0.055 35 / 0.28)";
             }}
           >
             <span>↓</span>
