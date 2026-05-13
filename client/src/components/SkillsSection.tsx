@@ -79,6 +79,19 @@ const icons: Record<string, React.ReactNode> = {
       <path d="M13.5 14h2" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
     </svg>
   ),
+  xmind: (
+    <svg viewBox="0 0 24 24" fill="none" className="w-8 h-8">
+      <rect width="24" height="24" rx="6" fill="#F44336"/>
+      <path d="M7 7l10 10M17 7L7 17" stroke="white" strokeWidth="2.5" strokeLinecap="round"/>
+      <circle cx="12" cy="12" r="3" fill="white"/>
+    </svg>
+  ),
+  axure: (
+    <svg viewBox="0 0 24 24" fill="none" className="w-8 h-8">
+      <rect width="24" height="24" rx="6" fill="#00AEEF"/>
+      <path d="M12 6l-5 12h2.5l1-2.5h3l1 2.5H17L12 6zm-1 7l1-2.5 1 2.5h-2z" fill="white"/>
+    </svg>
+  ),
 };
 
 const SKILL_GROUPS = [
@@ -89,6 +102,8 @@ const SKILL_GROUPS = [
     icon: "🎯",
     skills: [
       { name: "墨刀", key: "modao", desc: "原型设计" },
+      { name: "Axure", key: "axure", desc: "高保真原型" },
+      { name: "XMind", key: "xmind", desc: "思维导图" },
       { name: "ProcessOn", key: "processon", desc: "流程图绘制" },
       { name: "Canva", key: "canva", desc: "视觉设计" },
       { name: "剪映", key: "jianying", desc: "视频剪辑" },
