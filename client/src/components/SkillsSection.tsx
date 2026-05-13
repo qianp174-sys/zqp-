@@ -51,7 +51,7 @@ const icons: Record<string, React.ReactNode> = {
   wps: (
     <svg viewBox="0 0 24 24" fill="none" className="w-8 h-8">
       <rect width="24" height="24" rx="6" fill="#E84C3D"/>
-      <text x="4" y="17" fontSize="11" fontWeight="bold" fill="white" fontFamily="Arial">WPS</text>
+      <text x="12" y="16" fontSize="9" fontWeight="bold" fill="white" fontFamily="Arial" textAnchor="middle">WPS</text>
     </svg>
   ),
   excel: (
