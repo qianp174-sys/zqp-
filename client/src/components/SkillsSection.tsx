@@ -27,13 +27,7 @@ const icons: Record<string, React.ReactNode> = {
       <path d="M12 5.5C8.41 5.5 5.5 8.41 5.5 12S8.41 18.5 12 18.5c1.8 0 3.43-.68 4.66-1.8l-1.42-1.42C14.35 16.07 13.22 16.5 12 16.5c-2.48 0-4.5-2.02-4.5-4.5S9.52 7.5 12 7.5c1.22 0 2.35.43 3.24 1.14l1.42-1.42C15.43 6.18 13.8 5.5 12 5.5z" fill="white"/>
     </svg>
   ),
-  jianying: (
-    <svg viewBox="0 0 24 24" fill="none" className="w-8 h-8">
-      <rect width="24" height="24" rx="6" fill="#161823"/>
-      <path d="M9 8l8 4-8 4V8z" fill="white"/>
-      <rect x="6" y="7" width="2" height="10" rx="1" fill="#FE2C55"/>
-    </svg>
-  ),
+
   jira: (
     <svg viewBox="0 0 24 24" className="w-8 h-8">
       <rect width="24" height="24" rx="6" fill="#0052CC"/>
@@ -106,7 +100,7 @@ const SKILL_GROUPS = [
       { name: "XMind", key: "xmind", desc: "思维导图" },
       { name: "ProcessOn", key: "processon", desc: "流程图绘制" },
       { name: "Canva", key: "canva", desc: "视觉设计" },
-      { name: "剪映", key: "jianying", desc: "视频剪辑" },
+
     ],
   },
   {
